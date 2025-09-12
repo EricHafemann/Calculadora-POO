@@ -12,7 +12,7 @@ public class Calculadora {
     private double resultadoAtual;
     private boolean possuiResultado;
     private boolean OperacaoDiversas;
-    private boolean isFatorial; 
+    private boolean isPotencia; 
     private int valorExpoente;
     
     public void solicitarNumeros ()
@@ -29,7 +29,7 @@ public class Calculadora {
             }
         }
 
-        else if (isFatorial())
+        else if (isPotencia())
         {
             if (isPossuiResultado())
             {
@@ -78,9 +78,9 @@ public class Calculadora {
 
     public void exibirResultado ()
     {
-        System.out.println("   ----------------------");
-        System.out.println("            "+getResultadoAtual()+"         ");
-        System.out.println("   ----------------------\n");
+        System.out.println("  ----------------------");
+        System.out.println("           "+getResultadoAtual()+"         ");
+        System.out.println("  ----------------------\n");
     }
 
     public double getN1() 
@@ -143,14 +143,14 @@ public class Calculadora {
         OperacaoDiversas = operacaoDiversas;
     }
 
-    public boolean isFatorial() 
+    public boolean isPotencia() 
     {
-        return isFatorial;
+        return isPotencia;
     }
 
-    public void setFatorial(boolean isFatorial) 
+    public void setPotencia(boolean isFatorial) 
     {
-        this.isFatorial = isFatorial;
+        this.isPotencia = isFatorial;
     }
 
     public int getValorExpoente() 

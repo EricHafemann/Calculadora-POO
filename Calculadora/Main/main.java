@@ -6,6 +6,10 @@ import Operacao.*;
 import Operacao.Calculadora;
 import Operacao.Soma;
 import Operacao.Subtração;
+import OperacaoDiversas.Fatorial;
+import OperacaoDiversas.MMC;
+import OperacaoDiversas.MDC;
+import OperacaoDiversas.Módulo;
 import OperacaoDiversas.Potencia;
 import OperacaoDiversas.Raiz;
 import Operacao.Multiplicação;
@@ -39,9 +43,9 @@ public class main {
 
             else
             {
-                System.out.println("   ----------------------");
-                System.out.println("             "+"          ");
-                System.out.println("   ----------------------\n");
+                System.out.println("  ----------------------");
+                System.out.println("            "+"          ");
+                System.out.println("  ----------------------\n");
             }
 
 
@@ -51,8 +55,13 @@ public class main {
             System.out.println("[4] - Dividir");
             System.out.println("[5] - Raiz Quadrada");
             System.out.println("[6] - Potencia");
-            System.out.println("[7] - Zerar Calculadora");
-            System.out.println("[8] - Fechar Calculadora");
+            System.out.println("[7] - Fatorial");
+            System.out.println("[8] - Módulo (valor absoluto)");
+            System.out.println("[9] - MMC (Mínimo Múltiplo Comum)");
+            System.out.println("[10] - MDC (Máximo Divisor Comum)");
+            System.out.println("[11] - Zerar Calculadora");
+            System.out.println("[12] - Fechar Calculadora");
+            
 
             opMenu = Utility.lerInt();
             Utility.leString();
@@ -171,7 +180,7 @@ public class main {
                 }
                 case 6:
                 {
-                    calculadora.setFatorial(true);
+                    calculadora.setPotencia(true);
 
                     if (calculadora.isPossuiResultado())
                     {
@@ -188,10 +197,49 @@ public class main {
                         Utility.Cls(15);
                     }
                     calculadora.setPossuiResultado(true);
-                    calculadora.setFatorial(false);
+                    calculadora.setPotencia(false);
                     break;
                 }
                 case 7:
+                {
+                    if (calculadora.isPossuiResultado())
+                    {
+                        Fatorial.calcularFatorial(calculadora);
+                        Utility.Cls(15);
+                    }
+                    else
+                    {
+                        System.out.println("Digite um número: ");
+                        double numero = Utility.lerDouble();
+                        Utility.leString();
+
+                        calculadora.setResultadoAtual(numero);
+                        Fatorial.calcularFatorial(calculadora);
+                        Utility.Cls(15);
+                        calculadora.setPossuiResultado(true);
+                    }
+                    break;
+                }
+                case 8:
+                {
+                    Módulo.calcularModulo(calculadora);
+                    Utility.Cls(15);
+                    break;
+                }
+                
+                case 9:
+                {
+                    MMC.calcularMMC(calculadora);
+                    Utility.Cls(20);
+                    break;
+                }
+                case 10:
+                {
+                    MDC.calcularMDC(calculadora);
+                    Utility.Cls(20);
+                    break;
+                }
+                case 11:
                 {
                     calculadora.setResultadoAtual(0);
                     calculadora.setPossuiResultado(false);
@@ -200,12 +248,12 @@ public class main {
                     Utility.Cls(20);
                     break;
                 }
-        
-                case 8:
+                case 12:
                 {
                     Utility.Cls(15);
                     System.out.println("-- FIM DA CALCULADORA --\n");
-                    for (int i = 0; i < 3; i++) {
+                    for (int i = 0; i < 3; i++) 
+                    {
                         System.out.print(".");
                         Utility.Delay(1000);
                     }
