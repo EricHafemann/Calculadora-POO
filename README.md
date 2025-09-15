@@ -14,6 +14,10 @@ Projeto de uma calculadora em Java, que utiliza alguns dos pilares da POO;
 - `OperacaoDiversas`: operações adicionais
 - `Utilidades`: funções auxiliares para entrada de dados
 
+
+## TESTANDO COLABORAÇÃO
+
+- By Adryel: eric noob kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
 ---
 
 
