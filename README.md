@@ -17,7 +17,7 @@ Projeto de uma calculadora em Java, que utiliza alguns dos pilares da POO;
 
 ## TESTANDO COLABORAÇÃO
 
-- By Adryel: eric noob kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+- By Adryel: python > java || Adrybot
 ---
 
 
