@@ -15,9 +15,3 @@ Projeto de uma calculadora em Java, que utiliza alguns dos pilares da POO;
 - `Utilidades`: funções auxiliares para entrada de dados
 
 
-## TESTANDO COLABORAÇÃO
-
-- By Adryel: python > java || Adrybot
----
-
-
