@@ -6,12 +6,7 @@ import Operacao.*;
 import Operacao.Calculadora;
 import Operacao.Soma;
 import Operacao.Subtração;
-import OperacaoDiversas.Fatorial;
-import OperacaoDiversas.MMC;
-import OperacaoDiversas.MDC;
-import OperacaoDiversas.Módulo;
-import OperacaoDiversas.Potencia;
-import OperacaoDiversas.Raiz;
+import OperacaoDiversas.*;
 import Operacao.Multiplicação;
 import Operacao.Divisão;
 import Utilidades.Utility;
@@ -59,8 +54,11 @@ public class main {
             System.out.println("[8] - Módulo (valor absoluto)");
             System.out.println("[9] - MMC (Mínimo Múltiplo Comum)");
             System.out.println("[10] - MDC (Máximo Divisor Comum)");
-            System.out.println("[11] - Zerar Calculadora");
-            System.out.println("[12] - Fechar Calculadora");
+            System.out.println("[11] - Calcular Equação 1° Grau");
+            System.out.println("[12] - Calcular Equação 2° Grau");
+            System.out.println("[13] - Calcular (Seno | Cosseno | Tangente)");
+            System.out.println("[14] - Zerar Calculadora");
+            System.out.println("[15] - Fechar Calculadora");
             
 
             opMenu = Utility.lerInt();
@@ -226,12 +224,11 @@ public class main {
                     Utility.Cls(15);
                     break;
                 }
-                
                 case 9:
                 {
-                    MMC.calcularMMC(calculadora);
-                    Utility.Cls(20);
-                    break;
+                MMC.calcularMMC(calculadora);
+                Utility.Cls(20);
+                break;
                 }
                 case 10:
                 {
@@ -241,6 +238,48 @@ public class main {
                 }
                 case 11:
                 {
+                    System.out.println("Digite o valor de (a): ");
+                    int a = Utility.lerInt();
+                    Utility.leString();
+
+                    System.out.println("\nDigite o valor de (b): ");
+                    int b = Utility.lerInt();
+                    Utility.leString();
+
+                    CalculorEquacao.calcularEquacao(calculadora,a,b);
+                    break;
+                }
+                
+                case 12:
+                {
+                    System.out.println("Digite o valor de (a): ");
+                    int a = Utility.lerInt();
+                    Utility.leString();
+
+                    System.out.println("\nDigite o valor de (b): ");
+                    int b = Utility.lerInt();
+                    Utility.leString();
+
+                    System.out.println("\nDigite o valor de (c): ");
+                    int c = Utility.lerInt();
+                    Utility.leString();
+
+                    CalcularEquacao2.calcularEquacao2(calculadora,a,b,c);
+                    break;
+                }
+
+                case 13:
+                {
+                    System.out.println("Digite o valor do ângulo: ");
+                    double angulo = Utility.lerDouble();
+                    Utility.leString();
+
+                    Trigonometria.calcularTrigonometria(1);
+                    break;
+
+                }
+                case 14:
+                {
                     calculadora.setResultadoAtual(0);
                     calculadora.setPossuiResultado(false);
                     System.out.println("\n-- Calculadora Zerada --\n");
@@ -248,7 +287,7 @@ public class main {
                     Utility.Cls(20);
                     break;
                 }
-                case 12:
+                case 15:
                 {
                     Utility.Cls(15);
                     System.out.println("-- FIM DA CALCULADORA --\n");
