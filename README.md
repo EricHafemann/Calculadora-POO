@@ -44,7 +44,6 @@ Módulo dedicado a **conversões úteis no contexto da tecnologia**:
 ## 🛠️ Tecnologias e Arquitetura
 
 - **Linguagem**: Java
-- **Paradigma**: Programação Orientada a Objetos (POO)
 - **Organização de Pacotes**:
   - `Main` - Onde é realizado o código geral
   - `Operacao` – Operações básicas e matemáticas.
