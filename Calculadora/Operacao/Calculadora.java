@@ -74,14 +74,24 @@ public class Calculadora {
         }
     }
 
-    
+
 
     public void exibirResultado ()
     {
-        System.out.println("  ----------------------");
-        System.out.println("           "+getResultadoAtual()+"         ");
-        System.out.println("  ----------------------\n");
+        String numero = String.format("%.2f", getResultadoAtual());
+
+        int largura = 26;
+        int espacos = (largura - numero.length()) / 2;
+
+        // Monta a linha centralizada
+        String linha = " ".repeat(espacos) + numero;
+
+        System.out.println("-".repeat(largura));
+        System.out.println(linha);
+        System.out.println("-".repeat(largura) + "\n");
     }
+
+
 
     public double getN1() 
     {

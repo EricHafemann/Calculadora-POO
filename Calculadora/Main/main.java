@@ -1,5 +1,7 @@
 package Main;
 
+import Conversao.Armazenamento;
+import Conversao.Tempo;
 import Operacao.*;
 
 // Import Classes de outros Pacotes
@@ -57,8 +59,9 @@ public class main {
             System.out.println("[11] - Calcular Equação 1° Grau");
             System.out.println("[12] - Calcular Equação 2° Grau");
             System.out.println("[13] - Calcular (Seno | Cosseno | Tangente)");
-            System.out.println("[14] - Zerar Calculadora");
-            System.out.println("[15] - Fechar Calculadora");
+            System.out.println("[14] - Menu de Conversões");
+            System.out.println("[15] - Zerar Calculadora");
+            System.out.println("[16] - Fechar Calculadora");
             
 
             opMenu = Utility.lerInt();
@@ -246,7 +249,7 @@ public class main {
                     int b = Utility.lerInt();
                     Utility.leString();
 
-                    CalculorEquacao.calcularEquacao(calculadora,a,b);
+                    CalcularEquacao.calcularEquacao(calculadora, a, b);
                     break;
                 }
                 
@@ -280,6 +283,11 @@ public class main {
                 }
                 case 14:
                 {
+                    menuConversao();
+                    break;
+                }
+                case 15:
+                {
                     calculadora.setResultadoAtual(0);
                     calculadora.setPossuiResultado(false);
                     System.out.println("\n-- Calculadora Zerada --\n");
@@ -287,7 +295,7 @@ public class main {
                     Utility.Cls(20);
                     break;
                 }
-                case 15:
+                case 16:
                 {
                     Utility.Cls(15);
                     System.out.println("-- FIM DA CALCULADORA --\n");
@@ -308,6 +316,85 @@ public class main {
             }
 
         }while(!fimCalculadora);
+    }
+
+    private static void menuConversao() {
+
+        Utility.Cls(20);
+        System.out.println("-- Formas de Conversões --");
+
+        System.out.println("\nEscolha uma opção de conversão: ");
+        System.out.println("{ Tempo }");
+        System.out.println("[1] - Segundos -> Minutos");
+        System.out.println("[2] - Horas -> Segundos");
+        System.out.println("{ Armazenamento }");
+        System.out.println("[3] - Bytes -> KB");
+        System.out.println("[4] - KB -> MB");
+        System.out.println("[5] - GB -> MB");
+        System.out.println("[6] - TB -> GB");
+        System.out.println("{ Velocidade de Rede }");
+        System.out.println("[7] - Mbps -> MB");
+        System.out.println("[8] - Gbps -> Mbps");
+        System.out.println("{ Processamento }");
+        System.out.println("[9] - GHz -> MHz");
+        System.out.println("[10] - MHz -> GHz");
+        System.out.println("[11] - Voltar ao Menu Principal");
+
+        int op = Utility.lerInt();
+        Utility.leString();
+
+        switch (op)
+        {
+            case 1:
+            {
+                Tempo.SegundoParaMinuto(calculadora);
+                menuConversao();
+                break;
+            }
+            case 2:
+            {
+                Tempo.horaParaSegundo(calculadora);
+                menuConversao();
+                break;
+            }
+            case 3:
+            {
+                Armazenamento.bytesParaKb(calculadora);
+                menuConversao();
+                break;
+            }
+            case 4:
+            {
+                Armazenamento.kbParaMb(calculadora);
+                menuConversao();
+                break;
+            }
+            case 5:
+            {
+                Armazenamento.gbParaMb(calculadora);
+                menuConversao();
+                break;
+            }
+            case 6:
+            {
+                Armazenamento.tbParaGb(calculadora);
+                menuConversao();
+                break;
+            }
+            case 11:
+            {
+                menuCalculadora();
+                break;
+            }
+            default:
+            {
+                System.out.println("-- Opção Inválida --");
+                Utility.Delay(2000);
+                Utility.Cls(20);
+                menuCalculadora();
+            }
+        }
+
     }
 }
 
