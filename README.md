@@ -1,42 +1,53 @@
-# Calculadora Modular 
-Este projeto é uma calculadora completa desenvolvida em Java, construída sob o princípio da modularidade da Programação Orientada a Objetos (POO). Sua arquitetura garante baixo acoplamento, onde cada funcionalidade (operação ou conversão) é encapsulada em sua própria classe, facilitando a manutenção e a expansão.
+# 💻 Calculadora Modular
+
+Este projeto é uma **calculadora completa desenvolvida em Java**, construída sob os princípios da **Programação Orientada a Objetos (POO)**, com foco na **modularidade**. Sua arquitetura garante **baixo acoplamento**, onde cada funcionalidade (operação ou conversão) é encapsulada em sua própria classe, facilitando a **manutenção**, **testes** e futuras **expansões**.
 
 ---
 
-✨ Funcionalidades Principais
-A calculadora oferece uma ampla gama de recursos, separada em dois menus principais:
+## ✨ Funcionalidades Principais
 
-1. Operações Matemáticas
-Além das operações básicas (Soma, Subtração, Multiplicação e Divisão), a calculadora lida com:
+A calculadora é dividida em **dois menus principais**, oferecendo uma ampla gama de funcionalidades:
 
-Matemática Avançada: Raiz Quadrada, Potenciação e Fatorial.
+### 1. Operações Matemáticas
 
-Álgebra: Solução de Equações de 1º e 2º Grau (Fórmula de Bhaskara).
+Além das operações básicas, o projeto contempla funcionalidades avançadas em diferentes áreas da matemática:
 
-Teoria dos Números: Cálculo de MMC, MDC e Módulo.
-
-Trigonometria: Funções de Seno, Cosseno e Tangente.
-
-Encadeamento: Capacidade de usar o resultado anterior na próxima operação.
-
----
-
-2. Módulos de Conversão
-O projeto possui um menu dedicado a conversões úteis em tecnologia:
-
-Tempo: Conversões entre segundos, minutos e horas.
-
-Armazenamento: Conversões entre Bytes, KB, MB, GB e TB.
-
-Rede: Conversão de taxas de transferência como Mbps para MB/s e Gbps para Mbps.
-
-Processamento: Conversão entre GHz e MHz.
+- ✅ **Operações Básicas**: Soma, Subtração, Multiplicação e Divisão.
+- 🧮 **Matemática Avançada**: Raiz Quadrada, Potenciação e Fatorial.
+- 🧩 **Álgebra**:
+  - Equações do 1º Grau
+  - Equações do 2º Grau (Fórmula de Bhaskara)
+- 🔢 **Teoria dos Números**:
+  - Cálculo de **MMC**
+  - Cálculo de **MDC**
+  - Cálculo de **Módulo**
+- 📐 **Trigonometria**: Funções de Seno, Cosseno e Tangente.
+- 🔁 **Encadeamento de Operações**: Permite utilizar o **resultado anterior** como entrada para a próxima operação.
 
 ---
 
-🛠️ Tecnologias e Arquitetura
-Linguagem: Java.
+### 2. Módulos de Conversão
 
-Estrutura: Design focado em Pacotes (Operacao, OperacaoDiversas, Conversao, Utilidades) para garantir a separação de responsabilidades.
+Módulo dedicado a **conversões úteis no contexto da tecnologia**:
 
-Conceito Central: Implementação robusta dos princípios de Encapsulamento e Modularidade.
+- ⏱️ **Tempo**:
+  - Conversões entre **segundos**, **minutos** e **horas**.
+- 💾 **Armazenamento**:
+  - Conversões entre **Bytes**, **KB**, **MB**, **GB** e **TB**.
+- 🌐 **Rede**:
+  - Conversões entre **Mbps**, **MB/s**, **Gbps**, etc.
+- 🧠 **Processamento**:
+  - Conversões entre **GHz** e **MHz**.
+
+---
+
+## 🛠️ Tecnologias e Arquitetura
+
+- **Linguagem**: Java
+- **Paradigma**: Programação Orientada a Objetos (POO)
+- **Organização de Pacotes**:
+  - `Main` - Onde é realizado o código geral
+  - `Operacao` – Operações básicas e matemáticas.
+  - `OperacaoDiversas` – Funções como fatorial, módulo, MMC/MDC, etc.
+  - `Conversao` – Módulos para conversões tecnológicas.
+  - `Utility` – Classes auxiliares e de suporte.
