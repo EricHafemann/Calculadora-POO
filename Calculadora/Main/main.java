@@ -1,8 +1,9 @@
 package Main;
 
 import Conversao.Armazenamento;
+import Conversao.Processamento;
 import Conversao.Tempo;
-import Operacao.*;
+import Conversao.VelocidadeRede;
 
 // Import Classes de outros Pacotes
 import Operacao.Calculadora;
@@ -378,6 +379,30 @@ public class main {
             case 6:
             {
                 Armazenamento.tbParaGb(calculadora);
+                menuConversao();
+                break;
+            }
+            case 7:
+            {
+                VelocidadeRede.mbpsParaMBs(calculadora);
+                menuConversao();
+                break;
+            }
+            case 8:
+            {
+                VelocidadeRede.gbpsParaMbps(calculadora);
+                menuConversao();
+                break;
+            }
+            case 9:
+            {
+                Processamento.ghzParaMHz(calculadora);
+                menuConversao();
+                break;
+            }
+            case 10:
+            {
+                Processamento.mhzParaGhz(calculadora);
                 menuConversao();
                 break;
             }
