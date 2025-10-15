@@ -62,6 +62,7 @@ public class MenuPrincipal {
             System.out.println("[14] - COSSENO                              [18] - CONVERSÃO DE REDE");
             System.out.println("[15] - TANGENTE                             [19] - CONVERSÃO DE PROCESSAMENTO");
             System.out.println("[16] - CONVERSÃO DE TEMPO                   [20] - OPERAÇÕES COM NÚMEROS COMPLEXOS");
+            System.out.println("[21] - ARREDONDAR");
 
             System.out.println();
             System.out.println("[99] - SAIR");
@@ -110,6 +111,9 @@ public class MenuPrincipal {
                     // Numeros Complexos
                     case 20 -> OperacoesComplexas.executar();
 
+                    // Arredondar
+                    case 21 -> calc.setValorAtual(Math.round(calc.getValorAtual()));
+
                     // Termina a Calculadora
                     case 99 -> {
                         System.out.println(VERDE + "\nEncerrando calculadora..." + RESET);
@@ -118,7 +122,7 @@ public class MenuPrincipal {
                     }
 
                     default -> {
-                        System.out.println(VERMELHO + "❌ Opção inválida!" + RESET);
+                        System.out.println(VERMELHO + "Opção inválida!" + RESET);
                         Delay.time(1000);
                     }
                 }
